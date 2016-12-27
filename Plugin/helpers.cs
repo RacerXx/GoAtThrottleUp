@@ -18,7 +18,7 @@ namespace GATU
 			Vector3d CoM, north, up;
 			Quaternion rotationSurface;
 
-			CoM = v.findWorldCenterOfMass();
+			CoM = v.CoMD;
 			up = (CoM - v.mainBody.position).normalized;
 
 			north = Vector3d.Exclude(up, (v.mainBody.position + v.mainBody.transform.up * (float)v.mainBody.Radius) - CoM).normalized;
